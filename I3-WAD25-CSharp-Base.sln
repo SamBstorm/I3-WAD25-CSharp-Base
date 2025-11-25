@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo03", "Demo03\Demo03.csproj", "{48C5C582-FAC5-4009-AD31-BB14EA510140}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{C76B9797-FE10-4F1E-B5C7-BCD380C23D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C76B9797-FE10-4F1E-B5C7-BCD380C23D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C76B9797-FE10-4F1E-B5C7-BCD380C23D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C5C582-FAC5-4009-AD31-BB14EA510140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C5C582-FAC5-4009-AD31-BB14EA510140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C5C582-FAC5-4009-AD31-BB14EA510140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C5C582-FAC5-4009-AD31-BB14EA510140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{E2FB80CF-84A8-4E8F-AD3D-0BBBA17F8796} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
 		{94F6396D-AF90-4CB8-B854-BA48CB4B2B2D} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
 		{C76B9797-FE10-4F1E-B5C7-BCD380C23D75} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
+		{48C5C582-FAC5-4009-AD31-BB14EA510140} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {661F7A11-D3B6-490F-9665-6E7B73A1F857}
