@@ -5,6 +5,8 @@
 // 1.  Type valeur → chaîne de caractères (string)
 // Utilisation d'une méthode: .ToString()
 
+using System.Collections;
+
 int a = 42;
 double b = 4.2;
 bool c = true;
@@ -89,7 +91,7 @@ short monShort = (short)monEntier; // Conversion explicite
 // int : 150_000: 00000000000000100100100111110000
 // short: 18_928:                  100100111110000 
 
-// 5.  Boxing / Unboxing (sera revu un peu plus tard [polymorphisme])
+// 5.  Boxing / Unboxing (sera revu un peu plus tard [Collection / Tableau object])
 // Boxing   : Envelopper un type valeur dans un type référence
 // Unboxing : Déballer un type valeur d'un type référence
 
