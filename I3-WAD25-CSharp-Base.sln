@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo01", "Demo01\Demo01.csproj", "{E2FB80CF-84A8-4E8F-AD3D-0BBBA17F8796}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo04", "Demo04\Demo04.csproj", "{5B9589B9-FD17-4B30-9EDC-F27FC5C57544}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo02", "Exo02\Exo02.csproj", "{050666FF-09DB-4478-90C8-88AE94689A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo05", "Demo05\Demo05.csproj", "{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +62,10 @@ Global
 		{050666FF-09DB-4478-90C8-88AE94689A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{050666FF-09DB-4478-90C8-88AE94689A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{050666FF-09DB-4478-90C8-88AE94689A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{8F2C6612-B1CF-47F1-9E07-EBE01384416A} = {71414C26-68BC-4287-A44E-0DB2EE486CB3}
 		{5B9589B9-FD17-4B30-9EDC-F27FC5C57544} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
 		{050666FF-09DB-4478-90C8-88AE94689A59} = {71414C26-68BC-4287-A44E-0DB2EE486CB3}
+		{1F0384D9-D7A8-4D69-A9A0-E19C54DDC30C} = {3EA0EF27-32C3-4667-9E40-B9CAF20F46BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {661F7A11-D3B6-490F-9665-6E7B73A1F857}
