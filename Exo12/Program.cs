@@ -9,6 +9,8 @@
             char[] playerSymbols = { 'X', 'O' };
             bool partieGagnee = false;
             ushort currentPlayer = default;
+            Queue<ushort[]> coordToDelete = new Queue<ushort[]>();
+            Stack<ushort[]> historic = new Stack<ushort[]>();
 
             Console.WriteLine("Bienvenue dans le jeu du Morpion");
 
@@ -33,7 +35,7 @@
             }
             #endregion
             
-            for(ushort turnCount = 0; turnCount < grille.Length && !partieGagnee; turnCount++)
+            for(ushort turnCount = 0; !partieGagnee; turnCount++)
             {
                 #region Affichage grille
                 Console.Clear();
@@ -83,6 +85,21 @@
 
                 grille[row, col] = playerSymbols[currentPlayer];
                 #endregion
+
+                if (historic.Count > 0)
+                {
+                    ushort[] coordinate = historic.Peek();
+                    grille[coordinate[0], coordinate[1]] = ' ';
+                }
+
+                coordToDelete.Enqueue(new ushort[]{row, col});
+                if(coordToDelete.Count() == 7)
+                {
+                    ushort[] coordinate = coordToDelete.Dequeue();
+                    grille[coordinate[0], coordinate[1]] = grille[coordinate[0], coordinate[1]].ToString().ToLower()[0];
+                    historic.Push(coordinate);
+                }
+
 
                 #region Vérification grille
                 if(turnCount >= 4)
