@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Demo09
+﻿namespace Demo09
 {
     internal class Program
     {
