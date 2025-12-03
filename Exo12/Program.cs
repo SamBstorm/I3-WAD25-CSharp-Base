@@ -7,7 +7,8 @@
             #region Préparation joueurs
             string[] playerNames = new string[2];
             char[] playerSymbols = { 'X', 'O' };
-            int currentPlayer = 0;
+            bool partieGagnee = false;
+            ushort currentPlayer = default;
 
             Console.WriteLine("Bienvenue dans le jeu du Morpion");
 
@@ -32,9 +33,7 @@
             }
             #endregion
             
-
-            
-            do
+            for(ushort turnCount = 0; turnCount < grille.Length && !partieGagnee; turnCount++)
             {
                 #region Affichage grille
                 Console.Clear();
@@ -58,6 +57,7 @@
                 #endregion
 
                 #region Tour du joueur
+                currentPlayer = (ushort)(turnCount % playerNames.Length);
                 Console.WriteLine($"{playerNames[currentPlayer]} à vous de jouer !");
                 string input;
                 bool isConverted;
@@ -84,9 +84,96 @@
                 grille[row, col] = playerSymbols[currentPlayer];
                 #endregion
 
-                //Changement de joueur 
-                currentPlayer = (currentPlayer == 0) ? 1 : 0;
-            } while (true);
+                #region Vérification grille
+                if(turnCount >= 4)
+                {
+                    #region Vérification ligne
+                    if (playerSymbols[currentPlayer] == grille[row, 0] &&
+                        playerSymbols[currentPlayer] == grille[row, 1] &&
+                        playerSymbols[currentPlayer] == grille[row, 2])
+                    {
+                        partieGagnee = true;
+                    }
+                    #endregion
+
+                    #region Vérification colonne
+                    if (playerSymbols[currentPlayer] == grille[0, col] &&
+                        playerSymbols[currentPlayer] == grille[1, col] &&
+                        playerSymbols[currentPlayer] == grille[2, col])
+                    {
+                        partieGagnee = true;
+                    }
+                    #endregion
+
+                    #region Vérification diagonales
+                    if ((col == 0 || col == 2) && (row == 0 || row == 2) || (col == 1 && row == 1))
+                    {
+                        #region Diagonale \
+                        ushort countSymbols = 0;
+                        for (int i = 0; i < TAILLE_GRILLE; i++)
+                        {
+                            if (grille[i, i] == playerSymbols[currentPlayer])
+                            {
+                                countSymbols++;
+                            }
+                        }
+                        if(countSymbols == 3)
+                        {
+                            partieGagnee = true;
+                        }
+                        #endregion
+
+                        #region Diagonale /
+                        countSymbols = 0;
+                        for (int i = 0; i < TAILLE_GRILLE; i++)
+                        {
+                            if (grille[i, (TAILLE_GRILLE-1)-i] == playerSymbols[currentPlayer])
+                            {
+                                countSymbols++;
+                            }
+                        }
+                        if (countSymbols == 3)
+                        {
+                            partieGagnee = true;
+                        }
+                        #endregion
+                    }
+                    #endregion
+                }
+                #endregion
+            }
+
+                #region Affichage grille
+                Console.Clear();
+
+            Console.Write("   ");
+            for (int repereColone = 0; repereColone < TAILLE_GRILLE; repereColone++)
+            {
+                Console.Write($"{repereColone}  ");
+            }
+            Console.WriteLine();
+
+            for (int ligne = 0; ligne < TAILLE_GRILLE; ligne++)
+            {
+                Console.Write($"{ligne} ");
+                for (int colonne = 0; colonne < TAILLE_GRILLE; colonne++)
+                {
+                    Console.Write($"[{grille[ligne, colonne]}]");
+                }
+                Console.WriteLine();
+            }
+            #endregion
+
+            if (partieGagnee)
+            {
+                Console.WriteLine($"Bravo {playerNames[currentPlayer]} !");
+            }
+            else
+            {
+                Console.WriteLine("Égalité !");
+            }
+
+            Console.WriteLine("Merci d'avoir joué!");
         }
     }
 }
