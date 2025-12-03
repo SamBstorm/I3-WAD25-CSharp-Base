@@ -4,24 +4,25 @@
     {
         static void Main(string[] args)
         {
-            char[] tab = new char[10];
+            bool[] tab = new bool[10];
 
             int position = 0;
 
-            for (int i = 0; i < tab.Length; i++)
-            {
-                tab[i] = '-';
-            }
-
-            tab[position] = 'o';
+            tab[position] = true;
             ConsoleKey lettre;
             do
             {
                 Console.Clear();
                 Console.WriteLine("Appuyez sur 'D' pour aller à droite ou 'G' pour aller à gauche");
-                Console.WriteLine(tab);
+                Console.Write('[');
+                foreach (bool isPresent in tab)
+                {
+                    if (isPresent) Console.Write('o');
+                    else Console.Write('-');
+                }
+                Console.WriteLine(']');
                 lettre = Console.ReadKey(true).Key;
-                tab[position] = '-';
+                tab[position] = false;
                 switch (lettre)
                 {
                     case ConsoleKey.D:
@@ -39,7 +40,7 @@
                         }
                         break;
                 }
-                tab[position] = 'o';
+                tab[position] = true;
             } while (lettre != ConsoleKey.Escape);
         }
     }
