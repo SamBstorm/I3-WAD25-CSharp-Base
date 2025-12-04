@@ -14,6 +14,7 @@
 - Demo08 : Tableau
 - Demo09 : List<T>
 - Demo10 : Dictionary<TKey, TValue>
+- Demo11 : Les structures
 
 ---
 
