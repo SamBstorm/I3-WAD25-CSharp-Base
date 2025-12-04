@@ -126,15 +126,24 @@ namespace Exo13
                                     Console.WriteLine("! Tâche non-existante !");
                                 }
                             } while (!exist);
-                            Console.WriteLine("Qui l'a terminée ?");
-                            string? userName = Console.ReadLine()?.Trim();
-                            while (string.IsNullOrWhiteSpace(userName))
+                            if(taches[tacheName] is null)
                             {
-                                Console.WriteLine("! Nom d'utilisateur invalide !");
                                 Console.WriteLine("Qui l'a terminée ?");
-                                userName = Console.ReadLine()?.Trim();
+                                string? userName = Console.ReadLine()?.Trim();
+                                while (string.IsNullOrWhiteSpace(userName))
+                                {
+                                    Console.WriteLine("! Nom d'utilisateur invalide !");
+                                    Console.WriteLine("Qui l'a terminée ?");
+                                    userName = Console.ReadLine()?.Trim();
+                                }
+                                taches[tacheName] = userName;
                             }
-                            taches[tacheName] = userName;
+                            else
+                            {
+                                Console.WriteLine("! Tâche déjà terminée !");
+                                Console.WriteLine("Appuyez sur une touche pour continuer...");
+                                Console.ReadKey();
+                            }
                             #endregion
                             break;
                     }
