@@ -15,6 +15,7 @@
 - Demo09 : List<T>
 - Demo10 : Dictionary<TKey, TValue>
 - Demo11 : Les structures
+- Demo12 : Les méthodes
 
 ---
 
@@ -35,3 +36,6 @@
 - Exo 11 : Décplacement d'un pion (Tableau)
 - Exo 12 : Jeu Morpion (Tableau matricielle)
 - Exo 13 : Gestionnaire de tâches (Dictionnary)
+### Structures
+- Exo 14 : Matrice de Point
+- Exo 15 : Gestionnaire de transactions
