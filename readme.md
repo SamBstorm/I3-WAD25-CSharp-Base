@@ -39,3 +39,6 @@
 ### Structures
 - Exo 14 : Matrice de Point
 - Exo 15 : Gestionnaire de transactions
+### Méthodes
+- Exo 16 : Celsius/Fahrenheit
+- Exo 17 : Menu
